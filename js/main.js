@@ -314,54 +314,367 @@
   document.querySelectorAll(".campus-carousel.carousel").forEach(function (el) {
     if (!window.bootstrap || !bootstrap.Carousel) return;
     var carousel = bootstrap.Carousel.getOrCreateInstance(el);
+    var inner = el.querySelector(".carousel-inner");
     var startX = 0;
     var deltaX = 0;
     var dragging = false;
+    var moved = false;
     var active = null;
+    var peek = null;
+    var width = 0;
+    var raf = 0;
 
-    function slideEl() {
-      return el.querySelector(".carousel-item.active");
+    function items() {
+      return Array.prototype.slice.call(el.querySelectorAll(".carousel-item"));
     }
 
-    function clearShift() {
-      if (active) {
-        active.style.transition = "";
-        active.style.transform = "";
+    function indexOfActive() {
+      var all = items();
+      var i = 0;
+      for (; i < all.length; i++) {
+        if (all[i].classList.contains("active")) return i;
       }
-      active = null;
+      return 0;
     }
 
-    el.addEventListener("mousedown", function (e) {
-      if (e.button !== 0) return;
-      dragging = true;
-      startX = e.clientX;
-      deltaX = 0;
-      active = slideEl();
-      el.classList.add("is-dragging");
-      carousel.pause();
-      e.preventDefault();
-    });
+    function itemAt(offset) {
+      var all = items();
+      var i = indexOfActive();
+      return all[(i + offset + all.length) % all.length];
+    }
 
-    window.addEventListener("mousemove", function (e) {
-      if (!dragging || !active) return;
-      deltaX = e.clientX - startX;
-      active.style.transition = "none";
-      active.style.transform = "translateX(" + deltaX + "px)";
-    });
+    function resetItem(node) {
+      if (!node) return;
+      node.style.transition = "";
+      node.style.transform = "";
+      node.style.display = "";
+    }
 
-    window.addEventListener("mouseup", function () {
+    function cleanup() {
+      resetItem(active);
+      resetItem(peek);
+      items().forEach(resetItem);
+      active = null;
+      peek = null;
+      el.classList.remove("is-dragging");
+    }
+
+    function paint() {
+      raf = 0;
+      if (!active || !width) return;
+      active.style.transform = "translate3d(" + deltaX + "px,0,0)";
+      if (peek) {
+        var from = deltaX > 0 ? -width : width;
+        peek.style.transform = "translate3d(" + (from + deltaX) + "px,0,0)";
+      }
+    }
+
+    function setPeek() {
+      if (!deltaX) return;
+      var wanted = itemAt(deltaX > 0 ? -1 : 1);
+      if (peek && peek !== wanted) {
+        resetItem(peek);
+        peek = null;
+      }
+      if (!peek && wanted && wanted !== active) {
+        peek = wanted;
+        peek.style.display = "block";
+        peek.style.transition = "none";
+        peek.style.transform = "translate3d(" + (deltaX > 0 ? -width : width) + "px,0,0)";
+      }
+    }
+
+    function finish() {
       if (!dragging) return;
       dragging = false;
-      el.classList.remove("is-dragging");
-      if (active) {
-        active.style.transition = "transform 0.35s ease";
+      if (raf) {
+        window.cancelAnimationFrame(raf);
+        raf = 0;
       }
-      if (Math.abs(deltaX) > 50) {
-        if (deltaX < 0) carousel.next();
-        else carousel.prev();
+
+      var threshold = Math.max(48, width * 0.12);
+      var go = moved && peek && Math.abs(deltaX) > threshold;
+      var goPrev = deltaX > 0;
+      var ms = go ? 360 : 280;
+
+      if (go) {
+        if (active) {
+          active.style.transition = "transform " + ms + "ms ease";
+          active.style.transform = "translate3d(" + (goPrev ? width : -width) + "px,0,0)";
+        }
+        peek.style.transition = "transform " + ms + "ms ease";
+        peek.style.transform = "translate3d(0,0,0)";
+        window.setTimeout(function () {
+          el.classList.remove("slide");
+          if (goPrev) carousel.prev();
+          else carousel.next();
+          cleanup();
+          el.classList.add("slide");
+          carousel.cycle();
+        }, ms);
+      } else {
+        if (active) {
+          active.style.transition = "transform " + ms + "ms ease";
+          active.style.transform = "translate3d(0,0,0)";
+        }
+        if (peek) {
+          peek.style.transition = "transform " + ms + "ms ease";
+          peek.style.transform = "translate3d(" + (deltaX > 0 ? -width : width) + "px,0,0)";
+        }
+        window.setTimeout(function () {
+          cleanup();
+          carousel.cycle();
+        }, ms);
       }
-      window.setTimeout(clearShift, 40);
-      carousel.cycle();
+      moved = false;
+    }
+
+    el.addEventListener("pointerdown", function (e) {
+      if (e.pointerType !== "mouse" || e.button !== 0) return;
+      if (e.target.closest("a, button")) return;
+      dragging = true;
+      moved = false;
+      startX = e.clientX;
+      deltaX = 0;
+      active = itemAt(0);
+      peek = null;
+      width = inner ? inner.getBoundingClientRect().width : el.getBoundingClientRect().width;
+      el.classList.add("is-dragging");
+      carousel.pause();
+      try {
+        el.setPointerCapture(e.pointerId);
+      } catch (err) {}
+      if (active) active.style.transition = "none";
+    });
+
+    el.addEventListener("pointermove", function (e) {
+      if (!dragging || !active) return;
+      deltaX = e.clientX - startX;
+      if (!moved && Math.abs(deltaX) < 8) return;
+      moved = true;
+      e.preventDefault();
+      setPeek();
+      if (!raf) raf = window.requestAnimationFrame(paint);
+    });
+
+    el.addEventListener("pointerup", finish);
+    el.addEventListener("pointercancel", finish);
+    el.addEventListener("lostpointercapture", function () {
+      if (dragging) finish();
     });
   });
+
+  (function initSchoolCalendar() {
+    var root = document.querySelector("[data-school-calendar]");
+    var dataEl = document.getElementById("cma-event-data");
+    if (!root || !dataEl) return;
+
+    var events = [];
+    try {
+      events = JSON.parse(dataEl.textContent);
+    } catch (err) {
+      events = [];
+    }
+
+    var grid = root.querySelector("[data-cal-grid]");
+    var label = root.querySelector("[data-cal-label]");
+    var asideTitle = root.querySelector("[data-cal-aside-title]");
+    var asideList = root.querySelector("[data-cal-aside-list]");
+    var monthList = root.querySelector("[data-cal-month-list]");
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var now = new Date();
+    var viewY = now.getFullYear();
+    var viewM = now.getMonth();
+    var selected = isoDate(now);
+    var filter = "all";
+
+    function pad(n) {
+      return n < 10 ? "0" + n : String(n);
+    }
+
+    function isoDate(d) {
+      return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+    }
+
+    function parseIso(iso) {
+      var p = iso.split("-");
+      return new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2]));
+    }
+
+    function matchesFilter(ev) {
+      return filter === "all" || ev.cat === filter;
+    }
+
+    function eventsOn(iso) {
+      return events.filter(function (ev) {
+        return ev.date === iso && matchesFilter(ev);
+      });
+    }
+
+    function eventCard(ev) {
+      var article = document.createElement("article");
+      article.className = "cal-event cal-event--" + ev.cat;
+      article.innerHTML = "<h4></h4><p class=\"cal-event-when\"></p><p></p>";
+      article.querySelector("h4").textContent = ev.title;
+      article.querySelector(".cal-event-when").textContent = ev.when;
+      article.querySelector("p:last-child").textContent = ev.detail;
+      return article;
+    }
+
+    function fillList(holder, list, emptyText) {
+      holder.innerHTML = "";
+      if (!list.length) {
+        var p = document.createElement("p");
+        p.className = "cal-empty";
+        p.textContent = emptyText;
+        holder.appendChild(p);
+        return;
+      }
+      list.forEach(function (ev) {
+        holder.appendChild(eventCard(ev));
+      });
+    }
+
+    function renderAside() {
+      var day = parseIso(selected);
+      asideTitle.textContent = day.getDate() + " " + months[day.getMonth()] + " " + day.getFullYear();
+      fillList(asideList, eventsOn(selected), "No events on this day.");
+
+      var prefix = viewY + "-" + pad(viewM + 1) + "-";
+      var monthEvents = events.filter(function (ev) {
+        return ev.date.indexOf(prefix) === 0 && matchesFilter(ev);
+      }).sort(function (a, b) {
+        return a.date < b.date ? -1 : 1;
+      });
+      fillList(monthList, monthEvents, "No events in this month for the selected filter.");
+    }
+
+    function render() {
+      label.textContent = months[viewM] + " " + viewY;
+      grid.innerHTML = "";
+
+      var first = new Date(viewY, viewM, 1);
+      var start = first.getDay();
+      var days = new Date(viewY, viewM + 1, 0).getDate();
+      var prevDays = new Date(viewY, viewM, 0).getDate();
+      var cells = [];
+      var i;
+
+      for (i = 0; i < start; i++) {
+        cells.push({
+          day: prevDays - start + 1 + i,
+          month: viewM - 1,
+          year: viewY,
+          muted: true
+        });
+      }
+      for (i = 1; i <= days; i++) {
+        cells.push({ day: i, month: viewM, year: viewY, muted: false });
+      }
+      while (cells.length % 7 !== 0) {
+        cells.push({
+          day: cells.length - (start + days) + 1,
+          month: viewM + 1,
+          year: viewY,
+          muted: true
+        });
+      }
+
+      var todayIso = isoDate(now);
+      cells.forEach(function (cell) {
+        var m = cell.month;
+        var y = cell.year;
+        if (m < 0) {
+          m = 11;
+          y -= 1;
+        }
+        if (m > 11) {
+          m = 0;
+          y += 1;
+        }
+        var iso = y + "-" + pad(m + 1) + "-" + pad(cell.day);
+        var dayEvents = eventsOn(iso);
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "cal-day";
+        if (cell.muted) btn.classList.add("is-muted");
+        if (iso === todayIso) btn.classList.add("is-today");
+        if (iso === selected) btn.classList.add("is-selected");
+        btn.setAttribute("aria-label", cell.day + " " + months[m] + " " + y + (dayEvents.length ? ", " + dayEvents.length + " event" + (dayEvents.length === 1 ? "" : "s") : ""));
+        if (iso === selected) btn.setAttribute("aria-pressed", "true");
+
+        var num = document.createElement("span");
+        num.className = "cal-day-num";
+        num.textContent = String(cell.day);
+        btn.appendChild(num);
+
+        var dots = document.createElement("span");
+        dots.className = "cal-day-events";
+        dayEvents.slice(0, 3).forEach(function (ev) {
+          var dot = document.createElement("span");
+          dot.className = "cal-dot cal-dot--" + ev.cat;
+          dots.appendChild(dot);
+        });
+        btn.appendChild(dots);
+
+        if (dayEvents[0]) {
+          var title = document.createElement("span");
+          title.className = "cal-day-title";
+          title.textContent = dayEvents[0].title;
+          btn.appendChild(title);
+        }
+
+        btn.addEventListener("click", function () {
+          selected = iso;
+          if (y !== viewY || m !== viewM) {
+            viewY = y;
+            viewM = m;
+          }
+          render();
+        });
+        grid.appendChild(btn);
+      });
+
+      renderAside();
+    }
+
+    root.querySelector("[data-cal-prev]").addEventListener("click", function () {
+      viewM -= 1;
+      if (viewM < 0) {
+        viewM = 11;
+        viewY -= 1;
+      }
+      selected = viewY + "-" + pad(viewM + 1) + "-01";
+      render();
+    });
+
+    root.querySelector("[data-cal-next]").addEventListener("click", function () {
+      viewM += 1;
+      if (viewM > 11) {
+        viewM = 0;
+        viewY += 1;
+      }
+      selected = viewY + "-" + pad(viewM + 1) + "-01";
+      render();
+    });
+
+    root.querySelector("[data-cal-today]").addEventListener("click", function () {
+      viewY = now.getFullYear();
+      viewM = now.getMonth();
+      selected = isoDate(now);
+      render();
+    });
+
+    root.querySelectorAll("[data-cal-filter]").forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        filter = chip.getAttribute("data-cal-filter");
+        root.querySelectorAll("[data-cal-filter]").forEach(function (other) {
+          other.classList.toggle("is-on", other === chip);
+        });
+        render();
+      });
+    });
+
+    render();
+  })();
 })();

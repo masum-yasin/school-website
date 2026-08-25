@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body data-page="news">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -172,39 +173,93 @@
           <p class="eyebrow">Official</p>
           <h2>Notice Board</h2>
         </header>
-        <h3>Administrative Notices</h3>
-        <article class="notice-item">
-          <time datetime="2026-08-12">12 Aug 2026</time>
-          <h3>Office hours and visitor protocol for Term 1</h3>
-          <p>Visitors sign in at the gate. Parent meetings are by appointment except for urgent pastoral matters.</p>
-        </article>
-        <article class="notice-item">
-          <time datetime="2026-07-28">28 Jul 2026</time>
-          <h3>Transport route update for Section 2</h3>
-          <p>Revised pickup cards are available from the office. Please destroy the previous card.</p>
-        </article>
-        <h3>Academic Notices</h3>
-        <article class="notice-item">
-          <time datetime="2026-08-10">10 Aug 2026</time>
-          <h3>Term 1 scheme of work available to class teachers</h3>
-          <p>Parents will receive a one-page curriculum outline at the first class meeting.</p>
-        </article>
-        <article class="notice-item">
-          <time datetime="2026-08-01">1 Aug 2026</time>
-          <h3>Library orientation for new Primary students</h3>
-          <p>Class-wise slots are posted on classroom doors. Please return borrowed books before the winter break.</p>
-        </article>
-        <h3>Examination / Result Notices</h3>
-        <article class="notice-item">
-          <time datetime="2026-06-20">20 Jun 2026</time>
-          <h3>Annual examination results — Secondary</h3>
-          <p>Reports may be collected from the office with a parent ID. Portal publication follows the next working day.</p>
-        </article>
-        <article class="notice-item">
-          <time datetime="2026-05-02">2 May 2026</time>
-          <h3>Annual examination routine published</h3>
-          <p>Class-wise timetables are attached to this notice and sent via the parent groups.</p>
-        </article>
+        <p class="notice-lead">Dated notices for families in Bangla Medium and English Version. Newest first.</p>
+
+        <div class="notice-board">
+          <div class="notice-group" data-aos="zoom-in-right" data-aos-duration="800">
+            <h3 class="notice-group-title">Administrative Notices</h3>
+            <div class="notice-grid">
+              <article class="notice-card">
+                <time class="notice-card-date" datetime="2026-08-12">
+                  <span class="notice-day">12</span>
+                  <span class="notice-mon">Aug 2026</span>
+                </time>
+                <div class="notice-card-body">
+                  <p class="notice-tag">Office</p>
+                  <h3>Office hours and visitor protocol for Term 1</h3>
+                  <p>Visitors sign in at the gate. Parent meetings are by appointment except for urgent pastoral matters.</p>
+                </div>
+              </article>
+              <article class="notice-card">
+                <time class="notice-card-date" datetime="2026-07-28">
+                  <span class="notice-day">28</span>
+                  <span class="notice-mon">Jul 2026</span>
+                </time>
+                <div class="notice-card-body">
+                  <p class="notice-tag">Transport</p>
+                  <h3>Transport route update for Section 2</h3>
+                  <p>Revised pickup cards are available from the office. Please destroy the previous card.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="notice-group" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="80">
+            <h3 class="notice-group-title">Academic Notices</h3>
+            <div class="notice-grid">
+              <article class="notice-card">
+                <time class="notice-card-date" datetime="2026-08-10">
+                  <span class="notice-day">10</span>
+                  <span class="notice-mon">Aug 2026</span>
+                </time>
+                <div class="notice-card-body">
+                  <p class="notice-tag">Curriculum</p>
+                  <h3>Term 1 scheme of work available to class teachers</h3>
+                  <p>Parents will receive a one-page curriculum outline at the first class meeting.</p>
+                </div>
+              </article>
+              <article class="notice-card">
+                <time class="notice-card-date" datetime="2026-08-01">
+                  <span class="notice-day">01</span>
+                  <span class="notice-mon">Aug 2026</span>
+                </time>
+                <div class="notice-card-body">
+                  <p class="notice-tag">Library</p>
+                  <h3>Library orientation for new Primary students</h3>
+                  <p>Class-wise slots are posted on classroom doors. Please return borrowed books before the winter break.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="notice-group" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="160">
+            <h3 class="notice-group-title">Examination / Result Notices</h3>
+            <div class="notice-grid">
+              <article class="notice-card">
+                <time class="notice-card-date" datetime="2026-06-20">
+                  <span class="notice-day">20</span>
+                  <span class="notice-mon">Jun 2026</span>
+                </time>
+                <div class="notice-card-body">
+                  <p class="notice-tag">Results</p>
+                  <h3>Annual examination results — Secondary</h3>
+                  <p>Reports may be collected from the office with a parent ID. Portal publication follows the next working day.</p>
+                </div>
+              </article>
+              <article class="notice-card">
+                <time class="notice-card-date" datetime="2026-05-02">
+                  <span class="notice-day">02</span>
+                  <span class="notice-mon">May 2026</span>
+                </time>
+                <div class="notice-card-body">
+                  <p class="notice-tag">Routine</p>
+                  <h3>Annual examination routine published</h3>
+                  <p>Class-wise timetables are attached to this notice and sent via the parent groups.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -236,47 +291,86 @@
     </section>
 
     <section class="section" id="events-calendar">
-      <div class="container split">
-        <div>
-          <header class="section-head">
-            <p class="eyebrow">Looking ahead</p>
-            <h2>Events Calendar</h2>
-          </header>
-          <h3>Upcoming Events</h3>
-          <article class="notice-item">
-            <time datetime="2026-08-22">22 Aug 2026</time>
-            <h3>New parent orientation</h3>
-            <p>9:00 a.m., auditorium. Please bring the enrolment pack.</p>
-          </article>
-          <article class="notice-item">
-            <time datetime="2026-09-06">6 Sep 2026</time>
-            <h3>Inter-house debate — senior section</h3>
-            <p>After school, auditorium. Guests welcome.</p>
-          </article>
-          <article class="notice-item">
-            <time datetime="2026-09-18">18 Sep 2026</time>
-            <h3>First parent–teacher meeting</h3>
-            <p>Booked slots; lists go up on the notice board a week prior.</p>
-          </article>
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Looking ahead</p>
+          <h2>Events Calendar</h2>
+        </header>
+        <p class="notice-lead">Dates for assemblies, meetings, and campus days — open to Bangla Medium and English Version families.</p>
+
+        <div class="cal-app" data-school-calendar>
+          <div class="cal-toolbar">
+            <div class="cal-month-nav">
+              <button type="button" class="cal-nav-btn" data-cal-prev aria-label="Previous month">‹</button>
+              <h3 class="cal-month-label" data-cal-label>August 2026</h3>
+              <button type="button" class="cal-nav-btn" data-cal-next aria-label="Next month">›</button>
+            </div>
+            <button type="button" class="cal-today-btn" data-cal-today>Today</button>
+          </div>
+
+          <div class="cal-filters" role="group" aria-label="Filter events">
+            <button type="button" class="cal-chip is-on" data-cal-filter="all">All</button>
+            <button type="button" class="cal-chip" data-cal-filter="families">Families</button>
+            <button type="button" class="cal-chip" data-cal-filter="academic">Academic</button>
+            <button type="button" class="cal-chip" data-cal-filter="culture">Culture</button>
+            <button type="button" class="cal-chip" data-cal-filter="sports">Sports</button>
+          </div>
+
+          <div class="cal-shell">
+            <div class="cal-month">
+              <div class="cal-weekdays" aria-hidden="true">
+                <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+              </div>
+              <div class="cal-grid" data-cal-grid></div>
+            </div>
+            <aside class="cal-aside" aria-live="polite">
+              <p class="cal-aside-kicker">Selected day</p>
+              <h3 class="cal-aside-title" data-cal-aside-title>Choose a date</h3>
+              <div class="cal-aside-list" data-cal-aside-list></div>
+              <p class="cal-aside-kicker cal-aside-kicker--later">This month</p>
+              <div class="cal-aside-month" data-cal-month-list></div>
+              <p class="cal-academic-link"><a href="academics.html#academic-calendar">Term dates and holidays</a></p>
+            </aside>
+          </div>
+
+          <ul class="cal-legend">
+            <li><span class="cal-dot cal-dot--families"></span> Families</li>
+            <li><span class="cal-dot cal-dot--academic"></span> Academic</li>
+            <li><span class="cal-dot cal-dot--culture"></span> Culture</li>
+            <li><span class="cal-dot cal-dot--sports"></span> Sports</li>
+          </ul>
         </div>
-        <div>
-          <h3>Past Events &amp; Highlights</h3>
-          <article class="notice-item">
-            <time datetime="2026-04-14">14 Apr 2026</time>
-            <h3>Pohela Boishakh on campus</h3>
-            <p>Music, colour, and a morning that belonged to the Cultural Club.</p>
-          </article>
-          <article class="notice-item">
-            <time datetime="2026-02-21">21 Feb 2026</time>
-            <h3>International Mother Language Day</h3>
-            <p>Recitations and a quiet assembly at the school mural.</p>
-          </article>
-          <article class="notice-item">
-            <time datetime="2026-01-16">16 Jan 2026</time>
-            <h3>Annual sports day</h3>
-            <p>House cups awarded; photographs are in the <a href="gallery.html#photo-gallery">photo gallery</a>.</p>
-          </article>
-        </div>
+
+        <script type="application/json" id="cma-event-data">
+          [
+            {"date":"2026-01-16","cat":"sports","title":"Annual sports day","when":"Morning, playground","detail":"House cups awarded. Photographs are in the photo gallery."},
+            {"date":"2026-02-21","cat":"culture","title":"International Mother Language Day","when":"Morning assembly","detail":"Recitations and a quiet assembly at the school mural."},
+            {"date":"2026-03-26","cat":"culture","title":"Independence Day programme","when":"Morning, auditorium","detail":"A campus assembly honouring 26 March, open to both streams."},
+            {"date":"2026-04-14","cat":"culture","title":"Pohela Boishakh on campus","when":"Morning, courtyard","detail":"Music, colour, and a morning with the Cultural Club."},
+            {"date":"2026-08-05","cat":"academic","title":"Science week exhibitions","when":"Week-long, auditorium","detail":"Primary and secondary classes share models and field notes. Families are invited on Friday afternoon."},
+            {"date":"2026-08-10","cat":"academic","title":"Term 1 begins","when":"First day of session","detail":"The same start date for Bangla Medium and English Version."},
+            {"date":"2026-08-22","cat":"families","title":"New parent orientation","when":"9:00 a.m., auditorium","detail":"Please bring the enrolment pack."},
+            {"date":"2026-09-06","cat":"sports","title":"Inter-house debate — senior section","when":"After school, auditorium","detail":"Guests welcome."},
+            {"date":"2026-09-18","cat":"families","title":"First parent–teacher meeting","when":"Booked slots","detail":"Lists go up on the notice board a week prior."},
+            {"date":"2026-10-12","cat":"academic","title":"Mid-term assessments begin","when":"Class-wise timetable","detail":"October tests for Term 1. Routines are issued to each class."},
+            {"date":"2026-12-16","cat":"culture","title":"Victory Day programme","when":"Morning assembly","detail":"A campus observance of 16 December."}
+          ]
+        </script>
+        <noscript>
+          <ol class="cal-noscript">
+            <li>16 Jan 2026 — Annual sports day</li>
+            <li>21 Feb 2026 — International Mother Language Day</li>
+            <li>26 Mar 2026 — Independence Day programme</li>
+            <li>14 Apr 2026 — Pohela Boishakh on campus</li>
+            <li>5 Aug 2026 — Science week exhibitions</li>
+            <li>10 Aug 2026 — Term 1 begins</li>
+            <li>22 Aug 2026 — New parent orientation</li>
+            <li>6 Sep 2026 — Inter-house debate — senior section</li>
+            <li>18 Sep 2026 — First parent–teacher meeting</li>
+            <li>12 Oct 2026 — Mid-term assessments begin</li>
+            <li>16 Dec 2026 — Victory Day programme</li>
+          </ol>
+        </noscript>
       </div>
     </section>
   </main>
@@ -348,6 +442,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

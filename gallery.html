@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body data-page="gallery">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -172,15 +173,19 @@
           <p class="eyebrow">Stills</p>
           <h2>Photo Gallery</h2>
         </header>
-        <div class="gallery-grid">
-          <img src="assets/images/life-assembly.png" alt="Morning assembly at Chetona Model Academy" width="640" height="400" />
-          <img src="assets/images/why-science-lab.png" alt="Science laboratory at CMA" width="640" height="400" />
-          <img src="assets/images/campus-study-garden.png" alt="Library and study garden at CMA" width="640" height="400" />
-          <img src="assets/images/life-active-play.png" alt="Playground and sports at CMA" width="640" height="400" />
-          <img src="assets/images/campus-fb-11.png" alt="Classroom learning at CMA" width="640" height="400" />
-          <img src="assets/images/about-pohela-students.png" alt="Students in cultural dress at CMA" width="640" height="400" />
-          <img src="assets/images/campus-fb-06.png" alt="Annual sports medal ceremony at CMA" width="640" height="400" />
-          <img src="assets/images/campus-victory-day.png" alt="Victory Day cultural programme at CMA" width="640" height="400" />
+        <div class="gallery-rows">
+          <div class="gallery-row" data-aos="fade-right" data-aos-duration="800">
+            <img src="assets/images/life-assembly.png" alt="Morning assembly at Chetona Model Academy" width="640" height="400" />
+            <img src="assets/images/why-science-lab.png" alt="Science laboratory at CMA" width="640" height="400" />
+            <img src="assets/images/campus-study-garden.png" alt="Library and study garden at CMA" width="640" height="400" />
+            <img src="assets/images/life-active-play.png" alt="Playground and sports at CMA" width="640" height="400" />
+          </div>
+          <div class="gallery-row" data-aos="fade-left" data-aos-duration="800">
+            <img src="assets/images/campus-fb-11.png" alt="Classroom learning at CMA" width="640" height="400" />
+            <img src="assets/images/about-pohela-students.png" alt="Students in cultural dress at CMA" width="640" height="400" />
+            <img src="assets/images/campus-fb-06.png" alt="Annual sports medal ceremony at CMA" width="640" height="400" />
+            <img src="assets/images/campus-victory-day.png" alt="Victory Day cultural programme at CMA" width="640" height="400" />
+          </div>
         </div>
       </div>
     </section>
@@ -288,6 +293,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

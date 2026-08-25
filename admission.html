@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body data-page="admission">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -173,16 +174,25 @@
           <h2>Why Choose Chetona</h2>
         </header>
         <h3>Key Differentiators</h3>
-        <div class="grid grid-3">
-          <article class="card">
+        <div class="support-grid">
+          <article class="support-card" data-aos="fade-down-left" data-aos-duration="800">
+            <span class="support-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
             <h3>Known by name</h3>
-            <p>Class sizes and a single campus mean teachers recognise children in the corridor, not only on a register.</p>
+            <p>Class sizes and a single campus mean teachers recognise children in the corridor, not only on a register — in Bangla Medium and English Version.</p>
           </article>
-          <article class="card">
+          <article class="support-card" data-aos="fade-down-left" data-aos-duration="800" data-aos-delay="100">
+            <span class="support-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 19h16"/><path d="M4 15 12 4l8 11"/><path d="M12 4v15"/></svg>
+            </span>
             <h3>One path, K–12</h3>
-            <p>Families do not have to change school at every stage. Continuity of culture and expectation is part of the design.</p>
+            <p>Families do not have to change school at every stage. Pre-Play through SSC sits on one campus, with the same culture and expectation.</p>
           </article>
-          <article class="card">
+          <article class="support-card" data-aos="fade-down-left" data-aos-duration="800" data-aos-delay="200">
+            <span class="support-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </span>
             <h3>Parents as partners</h3>
             <p>Notices, meetings, and office hours are published. You should never have to hunt for the information that matters.</p>
           </article>
@@ -206,26 +216,51 @@
         <header class="section-head">
           <p class="eyebrow">How to join</p>
           <h2>Admission Process</h2>
+          <p class="section-lead">Five clear steps for Bangla Medium and English Version — from first enquiry to a written offer.</p>
         </header>
-        <h3>Eligibility Criteria</h3>
-        <p>Places are offered by age and previous schooling. For Early Years, children should meet the age cut-off published in the current circular. For later years, a recent report card and a placement conversation help us recommend the right class.</p>
-        <h3>Step-by-Step Process</h3>
-        <ol class="steps">
-          <li><strong>Enquire or visit.</strong> Call the office or submit the enquiry form on the Contact page.</li>
-          <li><strong>Collect the circular.</strong> Fee notes, seat availability, and test dates are issued each session.</li>
-          <li><strong>Submit the application.</strong> Use the online form below or a paper form from the office.</li>
-          <li><strong>Assessment &amp; meeting.</strong> Age-appropriate tasks and a conversation with parents.</li>
-          <li><strong>Offer &amp; enrolment.</strong> Successful families receive a written offer and a deadline to confirm.</li>
+        <article class="process-elig">
+          <h3>Eligibility Criteria</h3>
+          <p>Places are offered by age and previous schooling. For Early Years, children should meet the age cut-off in the current circular. For later years, a recent report card and a placement conversation help us recommend the right class.</p>
+        </article>
+        <h3 class="process-subhead">Step-by-Step Process</h3>
+        <ol class="process-steps">
+          <li>
+            <span class="process-num">1</span>
+            <h3>Enquire or visit</h3>
+            <p>Call the office or send the enquiry form on the Contact page.</p>
+          </li>
+          <li>
+            <span class="process-num">2</span>
+            <h3>Collect the circular</h3>
+            <p>Fee notes, seat availability, and test dates are issued each session.</p>
+          </li>
+          <li>
+            <span class="process-num">3</span>
+            <h3>Submit the application</h3>
+            <p>Use the online form below or a paper form from the office.</p>
+          </li>
+          <li>
+            <span class="process-num">4</span>
+            <h3>Assessment &amp; meeting</h3>
+            <p>Age-appropriate tasks and a conversation with parents.</p>
+          </li>
+          <li>
+            <span class="process-num">5</span>
+            <h3>Offer &amp; enrolment</h3>
+            <p>Successful families receive a written offer and a deadline to confirm.</p>
+          </li>
         </ol>
-        <h3>Required Documents</h3>
-        <ul class="plain-list">
-          <li>Birth certificate or valid age proof</li>
-          <li>Two passport-size photographs of the student</li>
-          <li>Previous school report (if transferring)</li>
-          <li>Parents’ national ID copies</li>
-          <li>Immunisation record for Early Years applicants</li>
-        </ul>
-        <p><a class="btn btn-primary" href="#online-admission-form">Go to the application form</a></p>
+        <article class="process-docs">
+          <h3>Required Documents</h3>
+          <ul class="process-doc-list">
+            <li>Birth certificate or valid age proof</li>
+            <li>Two passport-size photographs of the student</li>
+            <li>Previous school report (if transferring)</li>
+            <li>Parents’ national ID copies</li>
+            <li>Immunisation record for Early Years applicants</li>
+          </ul>
+        </article>
+        <p class="process-cta"><a class="btn btn-primary" href="#online-admission-form">Go to the application form</a></p>
       </div>
     </section>
 
@@ -259,57 +294,91 @@
         <header class="section-head">
           <p class="eyebrow">Apply</p>
           <h2>Online Admission Form</h2>
+          <p class="section-lead">Apply for Bangla Medium or English Version. Complete the fields below and the office will contact you about the next step.</p>
         </header>
-        <h3>Application Form</h3>
-        <form class="form" id="admission-form" action="#" method="post" novalidate>
-          <div class="form-row">
-            <label for="student-name">Student name <span class="req" aria-hidden="true">*</span></label>
-            <input id="student-name" name="student-name" type="text" required autocomplete="name" />
-          </div>
-          <div class="form-row two">
-            <div class="form-row">
-              <label for="student-dob">Date of birth <span class="req" aria-hidden="true">*</span></label>
-              <input id="student-dob" name="student-dob" type="date" required />
-            </div>
-            <div class="form-row">
-              <label for="grade-applying">Grade applying for <span class="req" aria-hidden="true">*</span></label>
-              <select id="grade-applying" name="grade-applying" required>
-                <option value="">Select a class</option>
-                <option>Pre-Play</option>
-                <option>Play</option>
-                <option>Nursery</option>
-                <option>Kindergarten</option>
-                <option>Class 1</option>
-                <option>Class 2</option>
-                <option>Class 3</option>
-                <option>Class 4</option>
-                <option>Class 5</option>
-                <option>Class 6</option>
-                <option>Class 7</option>
-                <option>Class 8</option>
-                <option>Class 9</option>
-                <option>Class 10</option>
-                <option>O-Level</option>
-                <option>A-Level</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-row two">
-            <div class="form-row">
-              <label for="parent-name">Parent / guardian name <span class="req" aria-hidden="true">*</span></label>
-              <input id="parent-name" name="parent-name" type="text" required />
-            </div>
-            <div class="form-row">
-              <label for="parent-contact">Parent contact (phone or email) <span class="req" aria-hidden="true">*</span></label>
-              <input id="parent-contact" name="parent-contact" type="text" required autocomplete="tel" />
-            </div>
-          </div>
-          <p class="help">Required fields are marked with an asterisk (*).</p>
-          <p class="form-note" hidden></p>
-          <button class="btn btn-primary" type="submit">Submit application</button>
-        </form>
-        <h3>Submission Guidelines</h3>
-        <p>Complete every required field. After you submit, the admissions office will confirm by phone or email and advise on assessment dates. Paper copies are accepted at the school office during published hours if you prefer not to apply online.</p>
+        <div class="apply-layout">
+          <form class="form apply-card" id="admission-form" action="#" method="post" novalidate>
+            <fieldset class="apply-set">
+              <legend>Student details</legend>
+              <div class="form-row">
+                <label for="student-name">Student name <span class="req" aria-hidden="true">*</span></label>
+                <input id="student-name" name="student-name" type="text" required autocomplete="name" placeholder="Full name as on birth certificate" />
+              </div>
+              <div class="form-row two">
+                <div class="form-row">
+                  <label for="student-dob">Date of birth <span class="req" aria-hidden="true">*</span></label>
+                  <input id="student-dob" name="student-dob" type="date" required />
+                </div>
+                <div class="form-row">
+                  <label for="prev-school">Previous school <span class="optional">(if transferring)</span></label>
+                  <input id="prev-school" name="prev-school" type="text" placeholder="School name" />
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="apply-set">
+              <legend>Class and stream</legend>
+              <div class="form-row two">
+                <div class="form-row">
+                  <label for="stream">Medium <span class="req" aria-hidden="true">*</span></label>
+                  <select id="stream" name="stream" required>
+                    <option value="">Select a stream</option>
+                    <option>Bangla Medium</option>
+                    <option>English Version</option>
+                  </select>
+                </div>
+                <div class="form-row">
+                  <label for="grade-applying">Class applying for <span class="req" aria-hidden="true">*</span></label>
+                  <select id="grade-applying" name="grade-applying" required>
+                    <option value="">Select a class</option>
+                    <option>Pre-Play</option>
+                    <option>Play</option>
+                    <option>Nursery</option>
+                    <option>Kindergarten</option>
+                    <option>Class 1</option>
+                    <option>Class 2</option>
+                    <option>Class 3</option>
+                    <option>Class 4</option>
+                    <option>Class 5</option>
+                    <option>Class 6</option>
+                    <option>Class 7</option>
+                    <option>Class 8</option>
+                    <option>Class 9</option>
+                    <option>Class 10 / SSC</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="apply-set">
+              <legend>Parent / guardian</legend>
+              <div class="form-row">
+                <label for="parent-name">Parent / guardian name <span class="req" aria-hidden="true">*</span></label>
+                <input id="parent-name" name="parent-name" type="text" required autocomplete="name" />
+              </div>
+              <div class="form-row two">
+                <div class="form-row">
+                  <label for="parent-phone">Mobile number <span class="req" aria-hidden="true">*</span></label>
+                  <input id="parent-phone" name="parent-phone" type="tel" required autocomplete="tel" placeholder="01XXXXXXXXX" />
+                </div>
+                <div class="form-row">
+                  <label for="parent-email">Email</label>
+                  <input id="parent-email" name="parent-email" type="email" autocomplete="email" placeholder="name@example.com" />
+                </div>
+              </div>
+            </fieldset>
+            <p class="help">Required fields are marked with an asterisk (*). You can also submit a paper form at the school office.</p>
+            <p class="form-note" hidden></p>
+            <button class="btn btn-primary" type="submit">Submit application</button>
+          </form>
+          <aside class="apply-aside">
+            <h3>After you submit</h3>
+            <ul class="apply-tips">
+              <li>The office will confirm by phone or email.</li>
+              <li>You will be told the assessment date, if one is needed.</li>
+              <li>Keep a copy of the birth certificate and photographs ready.</li>
+              <li>Office: <a href="tel:+8801309132109">01309-132109</a></li>
+            </ul>
+          </aside>
+        </div>
       </div>
     </section>
 
@@ -417,6 +486,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

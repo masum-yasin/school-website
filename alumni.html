@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body data-page="alumni">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -167,19 +168,67 @@
     </section>
 
     <section class="section" id="alumni-network">
-      <div class="container split">
-        <div>
-          <header class="section-head">
-            <p class="eyebrow">Association</p>
-            <h2>Alumni Network</h2>
-          </header>
-          <h3>About the Alumni Association</h3>
-          <p>The Chetona Alumni Association keeps former students connected to one another and to the campus. We host an annual gathering, share university and career news, and invite alumni to speak in assemblies when they can.</p>
-          <p>Membership is open to anyone who completed a stage of study here. Register below so we can write to you with dates, not rumours.</p>
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Association</p>
+          <h2>Alumni Network</h2>
+        </header>
+
+        <div class="alumni-network" data-aos="zoom-in-down" data-aos-duration="900">
+          <div class="alumni-copy">
+            <h3>About the Alumni Association</h3>
+            <p>The Chetona Alumni Association keeps former students connected to one another and to the campus — whether you studied in Bangla Medium or English Version. We host an annual gathering, share university and career news, and invite alumni to speak in assemblies when they can.</p>
+            <ul class="alumni-points">
+              <li>
+                <span class="alumni-point-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </span>
+                <span>
+                  <strong>Annual gathering</strong>
+                  A dated reunion on campus, listed on the events calendar when the office sets the day.
+                </span>
+              </li>
+              <li>
+                <span class="alumni-point-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </span>
+                <span>
+                  <strong>News, not rumours</strong>
+                  University and career notes go to registered members, not through informal chains.
+                </span>
+              </li>
+              <li>
+                <span class="alumni-point-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 3 4 7v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V7l-8-4z"/></svg>
+                </span>
+                <span>
+                  <strong>Back in assembly</strong>
+                  Alumni who can spare a morning are invited to speak to current classes.
+                </span>
+              </li>
+            </ul>
+            <p>Membership is open to anyone who completed a stage of study here. Register so we can write to you with dates.</p>
+            <a class="btn btn-primary" href="#alumni-registration">Register with the association</a>
+          </div>
+
+          <div class="alumni-mosaic">
+            <figure>
+              <img src="assets/images/life-proud-moments.png" alt="CMA students celebrating proud moments together" width="640" height="480" />
+            </figure>
+            <figure>
+              <img src="assets/images/campus-fb-06.png" alt="Medal ceremony at Chetona Model Academy" width="320" height="240" />
+            </figure>
+            <figure>
+              <img src="assets/images/about-faculty-awards.png" alt="Awards day at CMA" width="320" height="240" />
+            </figure>
+            <figure>
+              <img src="assets/images/campus-fb-08.png" alt="Students and teachers under the CMA banner" width="320" height="240" />
+            </figure>
+            <figure>
+              <img src="assets/images/scholarship-student.png" alt="A CMA student with a scholarship award" width="320" height="240" />
+            </figure>
+          </div>
         </div>
-        <figure class="photo">
-          <img src="assets/images/life-proud-moments.png" alt="CMA students celebrating proud moments together" width="640" height="400" />
-        </figure>
       </div>
     </section>
 
@@ -191,19 +240,19 @@
         </header>
         <h3>Alumni Testimonials &amp; Achievements</h3>
         <div class="grid grid-3">
-          <article class="card">
+          <article class="story-card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
             <blockquote class="quote">
               <p>Engineering school felt familiar because Chetona had already taught me to sit with a hard problem.</p>
               <footer>Farhan Ahmed, Class of 2018 · Civil Engineering</footer>
             </blockquote>
           </article>
-          <article class="card">
+          <article class="story-card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="120">
             <blockquote class="quote">
               <p>I still hear my Bangla teacher’s voice when I write for work. Precision was a kindness, not a scolding.</p>
               <footer>Maliha Sultana, Class of 2016 · Journalism</footer>
             </blockquote>
           </article>
-          <article class="card">
+          <article class="story-card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="240">
             <blockquote class="quote">
               <p>The debate club was where I learned to disagree without diminishing anyone. That has served me in clinic and in life.</p>
               <footer>Dr. Tahmid Hasan, Class of 2014 · Medicine</footer>
@@ -213,36 +262,63 @@
       </div>
     </section>
 
-    <section class="section" id="alumni-registration">
+    <section class="section section-alt" id="alumni-registration">
       <div class="container">
         <header class="section-head">
           <p class="eyebrow">Keep in touch</p>
           <h2>Alumni Registration</h2>
+          <p class="section-lead">Join the Chetona Alumni Association — open to former students from Bangla Medium and English Version.</p>
         </header>
-        <h3>Registration Form</h3>
-        <form class="form" id="alumni-form" action="#" method="post">
-          <div class="form-row">
-            <label for="alumni-name">Name <span class="req" aria-hidden="true">*</span></label>
-            <input id="alumni-name" name="alumni-name" type="text" required autocomplete="name" />
-          </div>
-          <div class="form-row two">
-            <div class="form-row">
-              <label for="grad-year">Graduation year <span class="req" aria-hidden="true">*</span></label>
-              <input id="grad-year" name="grad-year" type="number" min="1990" max="2026" required />
-            </div>
-            <div class="form-row">
-              <label for="occupation">Current occupation <span class="req" aria-hidden="true">*</span></label>
-              <input id="occupation" name="occupation" type="text" required />
-            </div>
-          </div>
-          <div class="form-row">
-            <label for="alumni-email">Email <span class="req" aria-hidden="true">*</span></label>
-            <input id="alumni-email" name="alumni-email" type="email" required autocomplete="email" />
-          </div>
-          <p class="help">Required fields are marked with an asterisk (*).</p>
-          <p class="form-note" hidden></p>
-          <button class="btn btn-primary" type="submit">Register</button>
-        </form>
+        <div class="apply-layout">
+          <form class="form apply-card" id="alumni-form" action="#" method="post">
+            <fieldset class="apply-set">
+              <legend>Registration Form</legend>
+              <div class="form-row">
+                <label for="alumni-name">Name <span class="req" aria-hidden="true">*</span></label>
+                <input id="alumni-name" name="alumni-name" type="text" required autocomplete="name" placeholder="Name as it was on the school roll" />
+              </div>
+              <div class="form-row two">
+                <div class="form-row">
+                  <label for="grad-year">Graduation year <span class="req" aria-hidden="true">*</span></label>
+                  <input id="grad-year" name="grad-year" type="number" min="1990" max="2026" required placeholder="e.g. 2018" />
+                </div>
+                <div class="form-row">
+                  <label for="alumni-stream">Medium studied <span class="optional">(if you remember)</span></label>
+                  <select id="alumni-stream" name="alumni-stream">
+                    <option value="">Select a stream</option>
+                    <option>Bangla Medium</option>
+                    <option>English Version</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="occupation">Current occupation <span class="req" aria-hidden="true">*</span></label>
+                <input id="occupation" name="occupation" type="text" required placeholder="Study, work, or both" />
+              </div>
+              <div class="form-row two">
+                <div class="form-row">
+                  <label for="alumni-email">Email <span class="req" aria-hidden="true">*</span></label>
+                  <input id="alumni-email" name="alumni-email" type="email" required autocomplete="email" placeholder="name@example.com" />
+                </div>
+                <div class="form-row">
+                  <label for="alumni-phone">Mobile number <span class="optional">(optional)</span></label>
+                  <input id="alumni-phone" name="alumni-phone" type="tel" autocomplete="tel" placeholder="01XXXXXXXXX" />
+                </div>
+              </div>
+            </fieldset>
+            <p class="help">Required fields are marked with an asterisk (*). We use this only to write to you with gathering dates and school news.</p>
+            <p class="form-note" hidden></p>
+            <button class="btn btn-primary" type="submit">Register</button>
+          </form>
+          <aside class="apply-aside">
+            <h3>After you register</h3>
+            <ul class="apply-tips">
+              <li>The office adds you to the alumni list for the next gathering.</li>
+              <li>You receive dated notices, not informal forwards.</li>
+              <li>If you can speak in an assembly, mention it in a later email to <a href="mailto:info@cma.edu.bd">info@cma.edu.bd</a>.</li>
+            </ul>
+          </aside>
+        </div>
       </div>
     </section>
   </main>
@@ -314,6 +390,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
