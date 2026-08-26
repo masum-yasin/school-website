@@ -121,12 +121,12 @@
   var heroPlayer = document.querySelector("[data-hero-player]");
   var dotsWrap = document.querySelector(".hero-dots");
   var playlist = [
-    "assets/videos/hero-1.mp4",
-    "assets/videos/hero-2.mp4",
-    "assets/videos/hero-3.mp4",
-    "assets/videos/hero-4.mp4",
-    "assets/videos/hero-5.mp4",
-    "assets/videos/hero-6.mp4"
+    "assets/videos/home/hero-1.mp4",
+    "assets/videos/home/hero-2.mp4",
+    "assets/videos/home/hero-3.mp4",
+    "assets/videos/home/hero-4.mp4",
+    "assets/videos/home/hero-5.mp4",
+    "assets/videos/home/hero-6.mp4"
   ];
   var index = 0;
   var switching = false;

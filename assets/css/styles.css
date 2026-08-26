@@ -781,7 +781,7 @@ select {
 .why-visual {
   border-radius: var(--radius-lg);
   min-height: 360px;
-  background: center / cover no-repeat url("../assets/images/campus.jpg"),
+  background: center / cover no-repeat url("../images/common/campus.jpg"),
     linear-gradient(160deg, var(--blue), #1a6bb5);
   position: relative;
   overflow: hidden;
@@ -843,15 +843,15 @@ select {
 }
 
 .why-visual--principal {
-  background: #f0f3f7 center top / cover no-repeat url("../assets/images/principal.png");
+  background: #f0f3f7 center top / cover no-repeat url("../images/about/principal.png");
 }
 
 .why-visual--chairman {
-  background: #f0f3f7 center top / cover no-repeat url("../assets/images/chairman.jpg");
+  background: #f0f3f7 center top / cover no-repeat url("../images/about/chairman.jpg");
 }
 
 .why-visual--event {
-  background: center / cover no-repeat url("../assets/images/event-3.jpg");
+  background: center / cover no-repeat url("../images/home/event-3.jpg");
 }
 
 .why-visual::before {
