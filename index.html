@@ -158,55 +158,91 @@
     </nav>
   </header>
   <main id="main">
-    <section class="home-hero" aria-labelledby="hero-heading" data-hero-videos>
-      <div class="hero-media" aria-hidden="true">
-        <video class="hero-video" data-hero-player muted playsinline autoplay preload="auto" poster="assets/images/home/banner-hero.png"></video>
-        <div class="hero-fallback" style="background-image:url('assets/images/home/banner-hero.png')"></div>
-      </div>
-      <div class="container hero-content">
-        <div class="hero-copy">
-          <p class="eyebrow">Admissions open · Pre-Play to SSC</p>
-          <h1 id="hero-heading">Inspiring young minds. Building bright futures.</h1>
-          <hr class="hero-rule" />
-          <p>Chetona Model Academy is an English Version and Bangla Medium school in Mirpur — a safe campus where academic excellence and character grow together, from the first classroom through SSC.</p>
-          <div class="hero-actions btn-row">
-            <a class="btn btn-apply" href="admission.html#admission-process">Apply Now</a>
+    <section class="home-hero" aria-label="Campus photos">
+      <h1 class="visually-hidden">Chetona Model Academy</h1>
+      <div id="homeHeroCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel" data-bs-interval="4500" data-bs-pause="hover" data-bs-touch="true">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/images/gallery/campus-fb-08.png" alt="Students and teachers of Chetona Model Academy gathered under the school banner" width="1600" height="900" fetchpriority="high" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/about/about-pohela-students.png" alt="CMA students celebrating Pohela Boishakh on campus" width="1600" height="900" loading="lazy" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/gallery/campus-fb-11.png" alt="Classroom learning at Chetona Model Academy" width="1600" height="900" loading="lazy" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/gallery/campus-fb-05.png" alt="Annual Sports award ceremony at Chetona Model Academy" width="1600" height="900" loading="lazy" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/gallery/campus-victory-day.png" alt="Victory Day cultural programme at Chetona Model Academy" width="1600" height="900" loading="lazy" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/gallery/campus-fb-06.png" alt="Medal winners at CMA Annual Sports" width="1600" height="900" loading="lazy" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/home/banner-hero.png" alt="CMA students and teachers on a campus outing in Dhaka" width="1600" height="900" loading="lazy" />
           </div>
         </div>
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Campus photo 1"></button>
+          <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="1" aria-label="Campus photo 2"></button>
+          <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="2" aria-label="Campus photo 3"></button>
+          <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="3" aria-label="Campus photo 4"></button>
+          <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="4" aria-label="Campus photo 5"></button>
+          <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="5" aria-label="Campus photo 6"></button>
+          <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="6" aria-label="Campus photo 7"></button>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#homeHeroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous campus photo</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#homeHeroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next campus photo</span>
+        </button>
       </div>
-      <div class="hero-dots" aria-label="Hero videos"></div>
     </section>
 
-    <section class="section" aria-labelledby="welcome-heading">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow">From the leadership</p>
-          <h2 id="welcome-heading">Chairman's &amp; Principal's Welcome Message</h2>
-          <p class="section-lead">A warm greeting from the people who steer the school each day.</p>
-        </header>
-        <div class="grid grid-2">
-          <article class="card leader-card">
-            <figure class="leader-photo">
-              <img src="assets/images/about/chairman.png" alt="Chairman of Chetona Model Academy" width="320" height="400" />
-            </figure>
-            <div class="leader-copy">
-              <p class="leader-role">Chairman, Governing Body</p>
-              <h3>Chairman's welcome</h3>
-              <p>On behalf of the Governing Body, welcome to CMA. This campus is a promise to families in Mirpur: that your child will be taught with rigour and regarded with dignity.</p>
-              <a href="about.html#chairmans-message">Read the Chairman's message</a>
-            </div>
-          </article>
-          <article class="card leader-card">
-            <figure class="leader-photo">
-              <img src="assets/images/about/principal.png" alt="Principal of Chetona Model Academy, Brig Gen Md Mehdi Hassan (Retd)" width="320" height="400" />
-            </figure>
-            <div class="leader-copy">
-              <p class="leader-role">Principal</p>
-              <h3>Principal's welcome</h3>
-              <p>Dear parents — at CMA every child is valued, encouraged and inspired to succeed. We turn classroom teaching into practice so students grow in knowledge, character, creativity and communication.</p>
-              <a href="about.html#principals-message">Read the Principal's message</a>
-            </div>
-          </article>
+    <section class="section welcome-intro" aria-labelledby="welcome-intro-heading">
+      <div class="container welcome-intro-grid">
+        <div class="welcome-intro-copy">
+          <p class="eyebrow">Welcome</p>
+          <h2 id="welcome-intro-heading">Welcome to Chetona Model Academy</h2>
+          <p class="welcome-intro-slogan">Inspiring young minds. Building bright futures.</p>
+          <hr class="welcome-intro-rule" />
+          <p>English Version and Bangla Medium, from Pre-Play through SSC, on one campus in Mirpur — a safe school where academic excellence and character grow together.</p>
+          <div class="btn-row">
+            <a class="btn btn-apply" href="admission.html#admission-process">Apply Now</a>
+            <a class="btn btn-secondary" href="about.html">About CMA</a>
+          </div>
+        </div>
+        <figure class="welcome-intro-photo">
+          <img src="assets/images/gallery/campus-fb-08.png" alt="Students and teachers gathered at Chetona Model Academy, Mirpur" width="960" height="720" />
+          <figcaption>Pre-Play to SSC · Mirpur, Dhaka</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section why-choose" aria-labelledby="why-choose-heading">
+      <div class="container why-choose-grid" data-aos="fade-up-right" data-aos-duration="1000">
+        <figure class="why-choose-photo">
+          <img src="assets/images/student-life/life-mentorship.png" alt="A teacher giving caring, individual guidance to students at Chetona Model Academy" width="800" height="600" />
+        </figure>
+        <div class="why-choose-copy">
+          <p class="eyebrow">Parents</p>
+          <h2 id="why-choose-heading">Why Parents Choose CMA</h2>
+          <p class="why-choose-lead">Given the right environment, caring guidance and encouragement, every child succeeds.</p>
+          <p>CMA is one of Mirpur's respected educational institutions with two decades of experience. We combine learning with individual care, modern teaching and deep-rooted moral values.</p>
+          <h3>Our students grow up with:</h3>
+          <ul class="why-choose-list">
+            <li><strong>Strong Academic Foundation</strong> that prepares students for lifelong success.</li>
+            <li><strong>Fluent Reader and Confident Speaker</strong> in English.</li>
+            <li><strong>Mathematical Skill</strong> supported by Singapore Math and the modern Math Lab.</li>
+            <li><strong>Character Development</strong> with social and emotional learning through daily practice.</li>
+            <li><strong>Future-Ready Learning</strong> with digital literacy and STEM activities.</li>
+            <li><strong>Caring Teachers</strong></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -233,20 +269,57 @@
             <span class="stat-num">90+</span>
             <span class="stat-label">Trained teachers</span>
           </div>
-          <div class="stat" data-aos="fade-down" data-aos-duration="700" data-aos-delay="160">
-            <span class="stat-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-            </span>
-            <span class="stat-num">99.8%</span>
-            <span class="stat-label">Public exam pass</span>
-          </div>
-          <div class="stat" data-aos="fade-up" data-aos-duration="700" data-aos-delay="240">
+          <div class="stat" data-aos="fade-up" data-aos-duration="700" data-aos-delay="160">
             <span class="stat-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
             </span>
             <span class="stat-num">1:13</span>
             <span class="stat-label">Teacher–student ratio</span>
           </div>
+          <div class="stat" data-aos="fade-down" data-aos-duration="700" data-aos-delay="240">
+            <span class="stat-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </span>
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Public exam pass</span>
+            <span class="stat-note">Ranked No 1 in Mirpur — Among 34 Schools in the Sikkha Thana</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="welcome-heading">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">From the leadership</p>
+          <h2 id="welcome-heading">Chairman's &amp; Principal's Welcome Message</h2>
+          <p class="section-lead">A warm greeting from the people who steer the school each day.</p>
+        </header>
+        <div class="grid grid-2">
+          <article class="card leader-card">
+            <figure class="leader-photo">
+              <img src="assets/images/about/chairman.png" alt="Chairman of Chetona Model Academy, Maj Gen Md Rafiqul Alam, psc (Retd)" width="480" height="520" />
+            </figure>
+            <div class="leader-copy">
+              <p class="leader-role">Chairman, Governing Body</p>
+              <p class="leader-name">Maj Gen Md Rafiqul Alam, psc (Retd)</p>
+              <h3>Chairman's welcome</h3>
+              <p>On behalf of the Governing Body, welcome to CMA. This campus is a promise to families in Mirpur: that your child will be taught with rigour and regarded with dignity.</p>
+              <a href="about.html#chairmans-message">Read the Chairman's message</a>
+            </div>
+          </article>
+          <article class="card leader-card">
+            <figure class="leader-photo">
+              <img src="assets/images/about/principal.png" alt="Principal of Chetona Model Academy, Brig Gen Md Mehdi Hassan, SP, ndc, afwc, psc (Retd)" width="480" height="520" />
+            </figure>
+            <div class="leader-copy">
+              <p class="leader-role">Principal</p>
+              <p class="leader-name">Brig Gen Md Mehdi Hassan, SP, ndc, afwc, psc (Retd)</p>
+              <h3>Principal's welcome</h3>
+              <p>Dear parents — at CMA every child is valued, encouraged and inspired to succeed. We turn classroom teaching into practice so students grow in knowledge, character, creativity and communication.</p>
+              <a href="about.html#principals-message">Read the Principal's message</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -258,18 +331,13 @@
           <h2 id="programs-heading">Academic Programs Overview</h2>
           <p class="section-lead">English Version and Bangla Medium, from Pre-Play through SSC, on one campus.</p>
         </header>
-        <div class="grid grid-3">
-          <article class="card card-zoom card-morph" data-aos="zoom-out-right">
+        <div class="programs-split" data-aos="fade-up" data-aos-duration="3000">
+          <figure class="programs-photo">
+            <img src="assets/images/gallery/campus-fb-11.png" alt="Primary students at work in a Chetona Model Academy classroom" width="960" height="640" />
+          </figure>
+          <article class="card programs-copy">
             <h3>Early Years &amp; Primary</h3>
-            <p>Pre-Play and Early I–III follow an international early-years approach. Primary builds confident readers, careful thinkers, and kind classmates in both English Version and Bangla Medium.</p>
-          </article>
-          <article class="card card-zoom card-morph" data-aos="zoom-out-right" data-aos-delay="120">
-            <h3>Secondary</h3>
-            <p>National curriculum through Class X, with spoken English, Singapore Math, science labs, ICT and character education — preparing students for Dhaka Board SSC.</p>
-          </article>
-          <article class="card card-zoom card-morph" data-aos="zoom-out-right" data-aos-delay="240">
-            <h3>Higher Secondary (O-Level / A-Level)</h3>
-            <p>CMA currently educates through SSC. HSC affiliation is in process so students can continue under the same roof. University counselling already looks beyond the board exam.</p>
+            <p>The school provides education from Pre-Play through SSC, covering a complete academic journey from early childhood to secondary level.</p>
           </article>
         </div>
         <div class="btn-row">
@@ -278,53 +346,84 @@
       </div>
     </section>
 
-    <section class="section section-navy" aria-labelledby="campus-heading">
+    <section class="section campus-highlights-section" aria-labelledby="campus-heading">
       <div class="container">
         <header class="section-head">
           <p class="eyebrow">Campus</p>
           <h2 id="campus-heading">Campus &amp; Facilities Highlights</h2>
           <p class="section-lead">A single campus in Mirpur, designed for learning, play, and gathering.</p>
         </header>
-        <div id="campusCarousel" class="carousel slide campus-carousel" data-bs-ride="carousel" data-bs-interval="2300" data-bs-pause="hover" data-bs-touch="true">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="campus-carousel-row">
-                <figure class="photo campus-carousel-card">
-                  <img src="assets/images/gallery/campus-fb-08.png" alt="Students and teachers of Chetona Model Academy under the school banner" width="640" height="400" />
-                </figure>
-                <figure class="photo campus-carousel-card">
-                  <img src="assets/images/home/why-science-lab.png" alt="Hands-on science learning in the CMA laboratory" width="640" height="400" />
-                </figure>
-                <figure class="photo campus-carousel-card">
-                  <img src="assets/images/gallery/campus-study-garden.png" alt="Study garden on the CMA campus in Mirpur" width="640" height="400" />
-                </figure>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="campus-carousel-row">
-                <figure class="photo campus-carousel-card">
-                  <img src="assets/images/student-life/life-assembly.png" alt="Morning assembly in the courtyard at CMA" width="640" height="400" />
-                </figure>
-                <figure class="photo campus-carousel-card">
-                  <img src="assets/images/gallery/campus-pohela.png" alt="Pohela Boishakh celebration on campus" width="640" height="400" />
-                </figure>
-                <figure class="photo campus-carousel-card">
-                  <img src="assets/images/gallery/campus-fb-11.png" alt="Classroom learning at Chetona Model Academy" width="640" height="400" />
-                </figure>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="campus-carousel-row">
-                <figure class="photo campus-carousel-card">
-                  <img src="assets/images/gallery/campus-fb-06.png" alt="Annual sports medal ceremony at CMA" width="640" height="400" />
-                </figure>
-                <figure class="photo campus-carousel-card">
-                  <img src="assets/images/gallery/campus-victory-day.png" alt="Victory Day programme at CMA" width="640" height="400" />
-                </figure>
-                <figure class="photo campus-carousel-card">
-                  <img src="assets/images/about/about-scouts.png" alt="Scout troop at Chetona Model Academy" width="640" height="400" />
-                </figure>
-              </div>
+        <div class="campus-highlights" data-campus-highlights>
+          <div class="campus-hl-card-host" data-aos="fade-up" data-aos-duration="1100">
+          <div class="campus-hl-card campus-hl-card-text" data-campus-text aria-live="polite">
+            <article class="campus-hl-panel is-active">
+              <p class="eyebrow">Campus</p>
+              <h3>The Mirpur campus</h3>
+              <p>Chetona Model Academy stands on a single, well-kept campus in Mirpur — from Pre-Play through SSC, under one roof and one standard of care. English Version and Bangla Medium families arrive at the same gate, welcomed by the CMA banner and a community that knows its children by name.</p>
+            </article>
+            <article class="campus-hl-panel">
+              <p class="eyebrow">Laboratories</p>
+              <h3>Science on the bench</h3>
+              <p>In the laboratory, curiosity is given proper tools: microscopes, careful measurement, and the discipline of testing an idea before writing it down. Students learn to observe, record, and explain — habits that serve them in public examinations and long after.</p>
+            </article>
+            <article class="campus-hl-panel">
+              <p class="eyebrow">Study</p>
+              <h3>Library &amp; study garden</h3>
+              <p>The library is staffed and quiet, with tables for independent work and story corners for younger readers. A shaded study garden offers a calm outdoor bay at break — so reading is not confined to the timetable, but becomes a natural part of the school day.</p>
+            </article>
+            <article class="campus-hl-panel">
+              <p class="eyebrow">Daily life</p>
+              <h3>Morning assembly</h3>
+              <p>Each morning the campus gathers in the courtyard: a brief, orderly assembly for notices, song, and a shared beginning. It is a small ritual with a lasting purpose — children learn to stand together, listen well, and start the day as one school.</p>
+            </article>
+            <article class="campus-hl-panel">
+              <p class="eyebrow">Culture</p>
+              <h3>Arts on campus</h3>
+              <p>Pohela Boishakh, Victory Day, and student performances fill the hall with music, recitation, and colour. Families are welcome; dates are published on the events calendar. Culture here is not an extra — it is how children learn belonging, language, and pride in their heritage.</p>
+            </article>
+            <article class="campus-hl-panel">
+              <p class="eyebrow">Classrooms</p>
+              <h3>Rooms built for teaching</h3>
+              <p>Classrooms are bright, orderly, and designed for attention: calm desks, clear instruction, and teachers who stay with a task until it is finished. From Early Years through SSC, both streams share the same expectation of careful work and respectful conduct.</p>
+            </article>
+            <article class="campus-hl-panel">
+              <p class="eyebrow">Sport</p>
+              <h3>Playground &amp; PE</h3>
+              <p>Physical education belongs on the weekly timetable, not only on Sports Day. Football, cricket, badminton, and athletics run as seasonal programmes, so children learn stamina, fair play, and the satisfaction of practising as a team.</p>
+            </article>
+            <article class="campus-hl-panel">
+              <p class="eyebrow">Clubs</p>
+              <h3>Scouts &amp; service</h3>
+              <p>Scouts and service clubs give after-school hours a clear purpose: uniform, outdoor skill, and responsibility beyond the classroom. Students learn to lead quietly, help others, and carry CMA’s values into the wider community.</p>
+            </article>
+          </div>
+          </div>
+          <div class="campus-hl-card campus-hl-card-image" data-aos="fade-down" data-aos-duration="1100">
+            <div class="campus-highlights-media" data-campus-media>
+            <figure class="campus-hl-frame is-active">
+              <img src="assets/images/gallery/campus-fb-08.png" alt="Students and teachers of Chetona Model Academy under the school banner" width="960" height="640" />
+            </figure>
+            <figure class="campus-hl-frame">
+              <img src="assets/images/home/why-science-lab.png" alt="Hands-on science learning in the CMA laboratory" width="960" height="640" />
+            </figure>
+            <figure class="campus-hl-frame">
+              <img src="assets/images/gallery/campus-study-garden.png" alt="Study garden on the CMA campus in Mirpur" width="960" height="640" />
+            </figure>
+            <figure class="campus-hl-frame">
+              <img src="assets/images/student-life/life-assembly.png" alt="Morning assembly in the courtyard at CMA" width="960" height="640" />
+            </figure>
+            <figure class="campus-hl-frame">
+              <img src="assets/images/gallery/campus-pohela.png" alt="Pohela Boishakh celebration on campus" width="960" height="640" />
+            </figure>
+            <figure class="campus-hl-frame">
+              <img src="assets/images/gallery/campus-fb-11.png" alt="Classroom learning at Chetona Model Academy" width="960" height="640" />
+            </figure>
+            <figure class="campus-hl-frame">
+              <img src="assets/images/gallery/campus-fb-06.png" alt="Annual sports medal ceremony at CMA" width="960" height="640" />
+            </figure>
+            <figure class="campus-hl-frame">
+              <img src="assets/images/about/about-scouts.png" alt="Scout troop at Chetona Model Academy" width="960" height="640" />
+            </figure>
             </div>
           </div>
         </div>
@@ -335,139 +434,12 @@
       </div>
     </section>
 
-    <section class="section scholarships" aria-labelledby="scholarships-heading">
-      <div class="container scholarship-grid">
-        <div class="scholarship-visual" data-aos="fade-right" data-aos-duration="800">
-          <figure class="scholarship-photo">
-            <img src="assets/images/home/scholarship-student.png" alt="A CMA student recognised for academic excellence" width="720" height="960" />
-          </figure>
-          <span class="scholarship-float scholarship-float-1" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="18" r="11" stroke="#c0392b" stroke-width="2.2"/><path d="M24 10.5l2.1 4.4 4.8.7-3.5 3.4.8 4.8L24 21.6l-4.2 2.2.8-4.8-3.5-3.4 4.8-.7L24 10.5z" fill="#c0392b"/><path d="M16 28.5 12 42l12-5 12 5-4-13.5" stroke="#c0392b" stroke-width="2.2" stroke-linejoin="round"/></svg>
-          </span>
-          <span class="scholarship-float scholarship-float-2" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none"><path d="M10 16c8 6 20 6 28 0" stroke="#2f5aa8" stroke-width="2.2" stroke-linecap="round"/><path d="M10 16v16c8 6 20 6 28 0V16" stroke="#2f5aa8" stroke-width="2.2" stroke-linejoin="round"/><path d="M10 24c8 6 20 6 28 0" stroke="#2f5aa8" stroke-width="2.2"/><ellipse cx="24" cy="16" rx="4.5" ry="3.2" stroke="#2f5aa8" stroke-width="2.2"/></svg>
-          </span>
-          <span class="scholarship-float scholarship-float-3" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="14" stroke="#1a365d" stroke-width="2.2"/><text x="24" y="29" text-anchor="middle" font-size="14" font-family="Georgia, serif" font-weight="700" fill="#1a365d">A+</text></svg>
-          </span>
-          <span class="scholarship-float scholarship-float-4" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none"><path d="M10 34V16h6v18" stroke="#c0392b" stroke-width="2.2" stroke-linejoin="round"/><path d="M16 34V14h6v20" stroke="#c0392b" stroke-width="2.2" stroke-linejoin="round"/><path d="M22 34V12h7v22" stroke="#c0392b" stroke-width="2.2" stroke-linejoin="round"/><path d="M29 34V18h9v16" stroke="#c0392b" stroke-width="2.2" stroke-linejoin="round"/><path d="M8 34h32" stroke="#c0392b" stroke-width="2.2" stroke-linecap="round"/></svg>
-          </span>
-        </div>
-        <div class="scholarship-copy" data-aos="fade-left" data-aos-duration="800" data-aos-delay="80">
-          <p class="eyebrow">Recognition</p>
-          <h2 id="scholarships-heading">Merit Scholarships &amp; Academic Excellence Awards</h2>
-          <p>At Chetona Model Academy, academic excellence is part of ordinary school life — not a slogan for prize day. From Pre-Play through SSC, English Version and Bangla Medium classes share the same expectation: careful work, honest effort, and results that stand up in Dhaka Board examinations.</p>
-          <p>Scholarship and award programmes are written so families know the criteria in advance. They recognise board performance, subject mastery, and character. Notices are posted each session; the office will walk a parent through eligibility if the wording is unclear.</p>
-          <h3>Distinguished scholarship &amp; award opportunities</h3>
-          <ul class="scholarship-list">
-            <li><strong>CMA Merit Scholarship</strong> — a session-wise fee concession for high achievement, reviewed each year with the class teacher’s report.</li>
-            <li><strong>SSC Academic Excellence Awards</strong> — gold, silver, and class prizes after public results, including GPA-5 and subject excellence.</li>
-            <li><strong>Talent Pool &amp; Board Scholarship support</strong> — documentation and coaching for students who qualify for government talent-pool and general scholarships.</li>
-            <li><strong>Subject &amp; character awards</strong> — English, mathematics, science, and service honours presented at annual prize day.</li>
-          </ul>
-          <p><a class="btn btn-apply" href="contact.html#enquiry-form">Ask about current criteria</a></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" aria-labelledby="life-preview-heading">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow">Beyond the timetable</p>
-          <h2 id="life-preview-heading">Student Life / Gallery Preview</h2>
-          <p class="section-lead">Clubs, sport, and the everyday life of the campus.</p>
-        </header>
-        <div class="life-carousel" data-carousel data-aos="fade-up" data-aos-duration="700">
-          <p class="visually-hidden" data-carousel-status aria-live="polite">1 / 8</p>
-          <div class="life-carousel-viewport" tabindex="0" aria-roledescription="carousel" aria-label="Student life photos">
-            <article class="life-slide is-active">
-              <img data-aos="fade-right" data-aos-duration="800" src="assets/images/gallery/campus-fb-06.png" alt="Medal winners on the podium at CMA Annual Sports" width="960" height="640" />
-              <div class="life-slide-copy" data-aos="fade-left" data-aos-duration="800" data-aos-delay="120">
-                <p class="eyebrow">Sports</p>
-                <h3>Annual Sports Day</h3>
-                <p>House colours, track events, and medals on the podium. Families attend the morning; trophies are awarded the same afternoon.</p>
-                <a href="student-life.html#sports-co-curricular">Sports &amp; co-curricular</a>
-              </div>
-            </article>
-            <article class="life-slide">
-              <img data-aos="fade-right" data-aos-duration="800" src="assets/images/student-life/life-assembly.png" alt="Morning assembly in the courtyard of Chetona Model Academy" width="960" height="640" />
-              <div class="life-slide-copy" data-aos="fade-left" data-aos-duration="800" data-aos-delay="120">
-                <p class="eyebrow">Daily life</p>
-                <h3>Morning assembly</h3>
-                <p>The school day begins together in the courtyard — a short gathering for notices, song, and the habit of starting as one campus.</p>
-                <a href="student-life.html">Parents &amp; student life</a>
-              </div>
-            </article>
-            <article class="life-slide">
-              <img data-aos="fade-right" data-aos-duration="800" src="assets/images/gallery/campus-pohela.png" alt="Pohela Boishakh cultural programme at CMA" width="960" height="640" />
-              <div class="life-slide-copy" data-aos="fade-left" data-aos-duration="800" data-aos-delay="120">
-                <p class="eyebrow">Arts &amp; culture</p>
-                <h3>Pohela Boishakh</h3>
-                <p>Music, dress, and New Year on campus. Students perform; families are welcome. Dates sit on the events calendar.</p>
-                <a href="student-life.html#arts-culture">Arts &amp; culture</a>
-              </div>
-            </article>
-            <article class="life-slide">
-              <img data-aos="fade-right" data-aos-duration="800" src="assets/images/gallery/campus-fb-11.png" alt="Students working at their desks in a CMA classroom" width="960" height="640" />
-              <div class="life-slide-copy" data-aos="fade-left" data-aos-duration="800" data-aos-delay="120">
-                <p class="eyebrow">In class</p>
-                <h3>Classroom work</h3>
-                <p>Quiet attention at the desk: writing, drawing, and the daily practice of staying with a task until it is finished.</p>
-                <a href="academics.html">Academics</a>
-              </div>
-            </article>
-            <article class="life-slide">
-              <img data-aos="fade-right" data-aos-duration="800" src="assets/images/student-life/life-active-play.png" alt="Students at play and sport on the CMA playground" width="960" height="640" />
-              <div class="life-slide-copy" data-aos="fade-left" data-aos-duration="800" data-aos-delay="120">
-                <p class="eyebrow">Sports</p>
-                <h3>Playground &amp; PE</h3>
-                <p>Physical education is on the weekly timetable. Football, cricket, badminton, and athletics run as seasonal programmes.</p>
-                <a href="student-life.html#sports-co-curricular">Sports programmes</a>
-              </div>
-            </article>
-            <article class="life-slide">
-              <img data-aos="fade-right" data-aos-duration="800" src="assets/images/gallery/campus-victory-day.png" alt="Victory Day cultural programme at Chetona Model Academy" width="960" height="640" />
-              <div class="life-slide-copy" data-aos="fade-left" data-aos-duration="800" data-aos-delay="120">
-                <p class="eyebrow">National days</p>
-                <h3>Victory Day</h3>
-                <p>Recitation, song, and a full campus audience. Independence Day and Victory Day are fixtures every year.</p>
-                <a href="news.html#events-calendar">Events calendar</a>
-              </div>
-            </article>
-            <article class="life-slide">
-              <img data-aos="fade-right" data-aos-duration="800" src="assets/images/gallery/campus-study-garden.png" alt="Study garden and library area at CMA" width="960" height="640" />
-              <div class="life-slide-copy" data-aos="fade-left" data-aos-duration="800" data-aos-delay="120">
-                <p class="eyebrow">Facilities</p>
-                <h3>Library &amp; study garden</h3>
-                <p>A staffed library, quiet tables, story corners for younger children, and a shaded outdoor bay for reading at break.</p>
-                <a href="student-life.html#facilities">Facilities</a>
-              </div>
-            </article>
-            <article class="life-slide">
-              <img data-aos="fade-right" data-aos-duration="800" src="assets/images/about/about-scouts.png" alt="Scout troop at Chetona Model Academy" width="960" height="640" />
-              <div class="life-slide-copy" data-aos="fade-left" data-aos-duration="800" data-aos-delay="120">
-                <p class="eyebrow">Clubs</p>
-                <h3>Scouts &amp; service</h3>
-                <p>Uniform, outdoor skills, and service beyond the classroom — one of the clubs that keep after-school hours purposeful.</p>
-                <a href="student-life.html#clubs-activities">Clubs &amp; activities</a>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="student-life.html">Parents &amp; student life</a>
-          <a class="btn btn-secondary" href="gallery.html">Open the gallery</a>
-        </div>
-      </div>
-    </section>
-
     <section class="section section-navy" id="campus-videos" aria-labelledby="videos-heading">
       <div class="container">
         <header class="section-head">
           <p class="eyebrow">Moving image</p>
           <h2 id="videos-heading">Campus videos</h2>
-          <p class="section-lead">The same campus films that play in the homepage hero — watch them here at your own pace.</p>
+          <p class="section-lead">Campus films from Chetona Model Academy — watch them here at your own pace.</p>
         </header>
         <div class="video-grid">
           <figure class="video-card">
