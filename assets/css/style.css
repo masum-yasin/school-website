@@ -227,15 +227,27 @@ p {
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-decoration: none;
-  border: 2px solid transparent;
+  border: 2px solid var(--navy);
+  background: transparent;
+  background-color: transparent;
+  color: var(--navy);
   cursor: pointer;
   box-shadow: none;
   filter: none;
   text-shadow: none;
+  --bs-btn-color: var(--navy);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--navy);
+  --bs-btn-hover-color: var(--navy);
+  --bs-btn-hover-bg: #97b2d5;
+  --bs-btn-hover-border-color: var(--navy);
+  --bs-btn-active-color: var(--navy);
+  --bs-btn-active-bg: #97b2d5;
+  --bs-btn-active-border-color: var(--navy);
   --bs-btn-box-shadow: none;
   --bs-btn-focus-box-shadow: none;
   --bs-btn-active-shadow: none;
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 button:focus-visible,
@@ -251,70 +263,52 @@ input[type="button"]:focus-visible {
   filter: none;
 }
 
-.btn-primary {
-  background: var(--navy);
-  color: var(--white);
-  border-color: var(--navy);
-}
-
-.btn-primary:hover,
-.btn-primary:focus-visible {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--navy-deep);
-}
-
-.btn-secondary {
+.btn.btn-primary,
+.btn.btn-secondary,
+.btn.btn-apply {
   background: transparent;
+  background-color: transparent;
   color: var(--navy);
   border-color: var(--navy);
 }
 
-.btn-secondary:hover,
-.btn-secondary:focus-visible {
-  background: var(--navy);
-  color: var(--white);
-}
-
-.section-navy .btn-secondary {
-  color: var(--white);
-  border-color: rgba(255, 255, 255, 0.55);
-}
-
-.section-navy .btn-secondary:hover {
-  background: var(--white);
+.btn:hover,
+.btn:focus-visible,
+.btn.btn-primary:hover,
+.btn.btn-primary:focus-visible,
+.btn.btn-secondary:hover,
+.btn.btn-secondary:focus-visible,
+.btn.btn-apply:hover,
+.btn.btn-apply:focus-visible {
+  background: #97b2d5;
+  background-color: #97b2d5;
+  border-color: var(--navy);
   color: var(--navy);
-  border-color: var(--white);
-}
-
-.home-hero .btn-secondary {
-  color: var(--white);
-  border-color: rgba(255, 255, 255, 0.55);
-}
-
-.home-hero .btn-secondary:hover,
-.home-hero .btn-secondary:focus-visible {
-  background: var(--white);
-  color: var(--navy);
-  border-color: var(--white);
+  box-shadow: none;
+  filter: none;
 }
 
 .btn-apply {
-  background: var(--gold);
-  color: var(--navy-deep);
-  border-color: var(--gold);
   white-space: nowrap;
-  box-shadow: none;
-  filter: none;
 }
 
-.btn-apply:hover,
-.btn-apply:focus-visible {
-  background: var(--white);
+.section-navy .btn,
+.home-hero .btn,
+.site-header .btn {
+  color: var(--white);
+  border-color: var(--white);
+  background: transparent;
+}
+
+.section-navy .btn:hover,
+.section-navy .btn:focus-visible,
+.home-hero .btn:hover,
+.home-hero .btn:focus-visible,
+.site-header .btn:hover,
+.site-header .btn:focus-visible {
+  background: #97b2d5;
   border-color: var(--white);
   color: var(--navy);
-  box-shadow: none;
-  filter: none;
 }
 
 .btn-row {
@@ -492,8 +486,8 @@ input[type="button"]:focus-visible {
   min-height: 2.75rem;
   padding: 0.55rem 1.25rem;
   border-radius: 0.35rem;
-  background: var(--white);
-  color: var(--navy-deep);
+  background: transparent;
+  color: var(--white);
   border: 2px solid var(--white);
   text-decoration: none;
   font-family: var(--font-body);
@@ -507,7 +501,7 @@ input[type="button"]:focus-visible {
 
 .header-portal:hover,
 .header-portal:focus-visible {
-  background: #f3f6fa;
+  background: #97b2d5;
   border-color: var(--white);
   color: var(--navy);
 }

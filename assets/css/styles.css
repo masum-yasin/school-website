@@ -115,7 +115,7 @@ select {
   color: rgba(255, 255, 255, 0.78);
 }
 
-/* Buttons ? Glenrich-style orange Apply Now */
+/* Buttons — navy outline; fill appears on hover */
 
 .btn {
   display: inline-flex;
@@ -127,54 +127,52 @@ select {
   font-family: var(--font);
   font-weight: 700;
   font-size: 0.92rem;
-  border: 2px solid transparent;
+  border: 2px solid var(--blue);
+  background: transparent;
+  color: var(--blue);
   cursor: pointer;
-  transition: 0.25s ease;
+  box-shadow: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.btn-orange {
-  background: var(--orange);
-  color: var(--white);
-  box-shadow: 0 8px 20px rgba(245, 130, 32, 0.35);
-}
-
-.btn-orange:hover {
-  background: var(--orange-hover);
-}
-
-.btn-outline-white {
-  background: transparent;
-  border-color: rgba(255, 255, 255, 0.65);
-  color: var(--white);
-}
-
-.btn-outline-white:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: var(--white);
-}
-
-.btn-outline-blue {
-  background: transparent;
+.btn:hover,
+.btn:focus-visible {
+  background: #97b2d5;
   border-color: var(--blue);
   color: var(--blue);
 }
 
-.btn-outline-blue:hover {
-  background: var(--blue);
+.btn-orange,
+.btn-blue,
+.btn-outline-blue {
+  background: transparent;
+  color: var(--blue);
+  border-color: var(--blue);
+  box-shadow: none;
+}
+
+.btn-orange:hover,
+.btn-blue:hover,
+.btn-outline-blue:hover,
+.btn-orange:focus-visible,
+.btn-blue:focus-visible,
+.btn-outline-blue:focus-visible {
+  background: #97b2d5;
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.btn-outline-white {
+  background: transparent;
+  border-color: var(--white);
   color: var(--white);
 }
 
-.btn-blue {
-  background: var(--blue);
-  color: var(--white);
-}
-
-.btn-blue:hover {
-  background: var(--blue-deep);
+.btn-outline-white:hover,
+.btn-outline-white:focus-visible {
+  background: #97b2d5;
+  border-color: var(--white);
+  color: var(--blue);
 }
 
 .btn-group {
@@ -444,8 +442,9 @@ select {
   margin-left: 10px !important;
   padding: 11px 20px !important;
   border-radius: 8px !important;
-  background: var(--blue-deep) !important;
-  color: var(--white) !important;
+  border: 2px solid var(--blue) !important;
+  background: transparent !important;
+  color: var(--blue) !important;
   font-weight: 700 !important;
   font-size: 0.92rem !important;
   letter-spacing: 0.02em !important;
@@ -453,9 +452,11 @@ select {
   line-height: 1.15 !important;
 }
 
-.nav-cta:hover {
-  background: var(--blue) !important;
-  color: var(--white) !important;
+.nav-cta:hover,
+.nav-cta:focus-visible {
+  background: #97b2d5 !important;
+  border-color: var(--blue) !important;
+  color: var(--blue) !important;
 }
 
 .nav-toggle {
@@ -618,7 +619,29 @@ select {
   min-width: 0;
   padding: 10px 18px;
   font-size: 0.84rem;
-  box-shadow: 0 8px 20px rgba(245, 130, 32, 0.4);
+  box-shadow: none;
+}
+
+.hero .btn,
+.campus-hero .btn,
+.section--blue .btn,
+.cta-band .btn {
+  color: var(--white);
+  border-color: var(--white);
+  background: transparent;
+}
+
+.hero .btn:hover,
+.hero .btn:focus-visible,
+.campus-hero .btn:hover,
+.campus-hero .btn:focus-visible,
+.section--blue .btn:hover,
+.section--blue .btn:focus-visible,
+.cta-band .btn:hover,
+.cta-band .btn:focus-visible {
+  background: #97b2d5;
+  border-color: var(--white);
+  color: var(--blue);
 }
 
 .hero-dots {
@@ -4292,7 +4315,7 @@ select {
 }
 
 .admit-hero--banner .btn-outline-blue {
-  background: #fff;
+  background: transparent;
 }
 
 .admit-hero-points {
