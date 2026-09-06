@@ -10,8 +10,8 @@
   --orange: #f58220;
   --orange-hover: #ff7300;
   --orange-soft: #ffbc7d;
-  --text: #1a1a1a;
-  --muted: #5a6570;
+  --text: #000000;
+  --muted: #000000;
   --line: #e6e9ee;
   --white: #ffffff;
   --bg: #ffffff;
@@ -23,8 +23,8 @@
   --shadow-hover: 0 16px 40px rgba(10, 61, 122, 0.14);
   --header-h: 72px;
   --max: 1200px;
-  --font: "Montserrat", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font: "Roboto", Arial, Helvetica, sans-serif;
+  --font-body: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 *,
@@ -725,7 +725,7 @@ select {
 .why-copy h2 em {
   font-style: normal;
   color: var(--orange);
-  font-family: "Caveat", "Segoe Print", cursive;
+  font-family: var(--font-body); font-style: italic; font-weight: 500;
   font-size: 1.28em;
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -1775,7 +1775,7 @@ select {
 .campus-hero-copy h1 em {
   font-style: normal;
   color: var(--orange);
-  font-family: "Caveat", "Segoe Print", cursive;
+  font-family: var(--font-body); font-style: italic; font-weight: 500;
   font-weight: 700;
   font-size: 1.12em;
 }
@@ -2043,7 +2043,7 @@ select {
 .zig-copy h2 em {
   font-style: normal;
   color: var(--orange);
-  font-family: "Caveat", "Segoe Print", cursive;
+  font-family: var(--font-body); font-style: italic; font-weight: 500;
   font-weight: 700;
   font-size: 1.18em;
 }
@@ -3277,7 +3277,7 @@ select {
 .about-story-copy h2 em,
 .about-feature-copy h2 em,
 .carousel-head h2 em {
-  font-family: "Caveat", cursive;
+  font-family: var(--font-body); font-style: italic; font-weight: 500;
   font-style: normal;
   font-weight: 700;
   color: var(--orange);
@@ -3411,7 +3411,7 @@ select {
   text-transform: uppercase;
   color: var(--orange);
   margin-bottom: 4px;
-  font-family: Inter, sans-serif;
+  font-family: var(--font-body);
 }
 
 .about-story-media {
@@ -3670,7 +3670,7 @@ select {
   position: absolute;
   top: 10px;
   left: 18px;
-  font-family: Georgia, serif;
+  font-family: var(--font); font-weight: 700;
   font-size: 3rem;
   line-height: 1;
   color: rgba(245, 130, 32, 0.25);
@@ -3813,7 +3813,7 @@ select {
 
 .admit-hero-copy h1 em,
 .admit-info-grid h2 em {
-  font-family: "Caveat", cursive;
+  font-family: var(--font-body); font-style: italic; font-weight: 500;
   font-style: normal;
   font-weight: 700;
   color: var(--orange);
@@ -4380,7 +4380,7 @@ select {
 }
 
 .section-head em {
-  font-family: "Caveat", cursive;
+  font-family: var(--font-body); font-style: italic; font-weight: 500;
   font-style: normal;
   color: var(--orange);
   font-weight: 700;
@@ -4453,7 +4453,7 @@ select {
 
 .contact-hero-copy h1 em,
 .contact-visit h2 em {
-  font-family: "Caveat", cursive;
+  font-family: var(--font-body); font-style: italic; font-weight: 500;
   font-style: normal;
   font-weight: 700;
   color: var(--orange);
@@ -4779,7 +4779,7 @@ select {
 
 .about-words-copy h2 em,
 .about-messages-section .section-head em {
-  font-family: "Caveat", cursive;
+  font-family: var(--font-body); font-style: italic; font-weight: 500;
   font-style: normal;
   color: var(--orange);
   font-weight: 700;
@@ -5011,7 +5011,7 @@ select {
 
 .about-msg blockquote p:first-child::before {
   content: "“";
-  font-family: Georgia, serif;
+  font-family: var(--font); font-weight: 700;
   font-size: 2.4rem;
   line-height: 0.8;
   color: rgba(245, 130, 32, 0.28);
@@ -5115,7 +5115,7 @@ select {
 .acad-intro-copy h2 em,
 .acad-section-head h2 em,
 .acad-promise-inner h2 em {
-  font-family: "Caveat", cursive;
+  font-family: var(--font-body); font-style: italic; font-weight: 500;
   font-style: normal;
   font-weight: 700;
   color: var(--orange);

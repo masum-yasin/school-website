@@ -10,16 +10,16 @@
   --character: #1f6b3f;
   --knowledge: #5a2d8c;
   --bg: #f5f9fc;
-  --ink: #1c2e40;
-  --slate: #5a6e7c;
+  --ink: #000000;
+  --slate: #000000;
   --tint: #e4f1f8;
   --border: #d4e3ee;
   --white: #ffffff;
   --content: 75rem;
   --radius: 0.5rem;
   --shadow: 0 8px 28px rgba(20, 58, 115, 0.1);
-  --font-heading: "Lora", Georgia, "Times New Roman", serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: "Roboto", Arial, Helvetica, sans-serif;
+  --font-body: "Roboto", Arial, Helvetica, sans-serif;
   --space: 1.25rem;
   --header-sticky: 0;
 }
@@ -40,10 +40,14 @@ body {
   margin: 0;
   font-family: var(--font-body);
   font-size: 1rem;
-  line-height: 1.6;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
   color: var(--ink);
   background: var(--bg);
   max-width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -53,7 +57,7 @@ img {
 }
 
 a {
-  color: var(--navy);
+  color: #000;
   text-decoration-color: var(--gold);
   text-underline-offset: 0.18em;
 }
@@ -121,8 +125,9 @@ h3,
 .wordmark {
   font-family: var(--font-heading);
   color: var(--navy);
-  line-height: 1.25;
-  font-weight: 600;
+  line-height: 1.28;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 h1 {
@@ -136,7 +141,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   margin: 1.75rem 0 0.5rem;
 }
 
@@ -218,8 +223,9 @@ p {
   border-radius: 0.35rem;
   font-family: var(--font-body);
   font-size: 0.9375rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
+  letter-spacing: 0.02em;
   text-decoration: none;
   border: 2px solid transparent;
   cursor: pointer;
@@ -938,9 +944,10 @@ body[data-page="contact"] [data-nav="contact"] > .nav-link {
   font-family: var(--font-heading);
   font-size: clamp(1.15rem, 2.1vw, 1.5rem);
   font-style: italic;
-  font-weight: 600;
-  line-height: 1.35;
-  color: var(--gold-dark);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #000;
   max-width: 22ch;
 }
 
@@ -953,9 +960,9 @@ body[data-page="contact"] [data-nav="contact"] > .nav-link {
 }
 
 .welcome-intro-copy > p:not(.eyebrow):not(.welcome-intro-slogan) {
-  margin: 0;
+  margin: 0 0 1rem;
   max-width: 36rem;
-  color: var(--slate);
+  color: #000;
   font-size: 1.05rem;
   line-height: 1.7;
 }
@@ -1036,7 +1043,9 @@ body[data-page="contact"] [data-nav="contact"] > .nav-link {
   font-family: var(--font-heading);
   font-size: 1.15rem;
   font-style: italic;
-  color: var(--navy);
+  font-weight: 500;
+  line-height: 1.5;
+  color: #000;
   max-width: 38rem;
 }
 
@@ -1082,7 +1091,7 @@ body[data-page="contact"] [data-nav="contact"] > .nav-link {
 }
 
 .why-choose-list strong {
-  color: var(--navy);
+  color: #000;
 }
 
 @media (min-width: 900px) {
@@ -2185,7 +2194,7 @@ body[data-page="contact"] [data-nav="contact"] > .nav-link {
 .stat-note {
   display: block;
   margin-top: 0.55rem;
-  color: var(--navy);
+  color: #000;
   font-size: 0.72rem;
   font-weight: 600;
   line-height: 1.35;
@@ -2216,8 +2225,10 @@ body[data-page="contact"] [data-nav="contact"] > .nav-link {
 .quote p {
   font-family: var(--font-heading);
   font-style: italic;
+  font-weight: 400;
   font-size: 1.125rem;
-  color: var(--navy);
+  line-height: 1.55;
+  color: #000;
   margin-bottom: 0.85rem;
 }
 
@@ -3144,7 +3155,7 @@ body[data-page="contact"] [data-nav="contact"] > .nav-link {
 
 .timeline strong {
   display: block;
-  color: var(--navy);
+  color: #000;
 }
 
 /* Tables, lists, forms */
@@ -3282,7 +3293,7 @@ body[data-page="contact"] [data-nav="contact"] > .nav-link {
 .support-points li {
   position: relative;
   padding: 0.4rem 0 0.4rem 1.15rem;
-  color: var(--navy);
+  color: #000;
   font-size: 0.9375rem;
   font-weight: 500;
 }
@@ -4153,7 +4164,7 @@ textarea {
 }
 
 .exam-steps strong {
-  color: var(--navy);
+  color: #000;
   font-family: var(--font-heading);
   font-size: 1.05rem;
 }
@@ -4364,7 +4375,7 @@ textarea {
 
 .life-slide-copy a {
   font-weight: 600;
-  color: var(--navy);
+  color: #000;
   text-decoration: none;
 }
 
